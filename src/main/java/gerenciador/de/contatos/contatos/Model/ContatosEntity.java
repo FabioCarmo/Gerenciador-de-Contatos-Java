@@ -1,8 +1,7 @@
 package gerenciador.de.contatos.contatos.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
 import java.util.*;
 
 @Entity
@@ -10,6 +9,7 @@ import java.util.*;
 public class ContatosEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String nome;
