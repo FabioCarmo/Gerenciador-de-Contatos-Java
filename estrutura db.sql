@@ -1,0 +1,11 @@
+
+USE Contatos;
+
+CREATE TABLE lista (
+	
+	id INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	nome VARCHAR(30) NOT NULL,
+	numero VARCHAR(15) NOT NULL,
+	grupo VARCHAR(10),
+	data DATE NOT NULL
+);
