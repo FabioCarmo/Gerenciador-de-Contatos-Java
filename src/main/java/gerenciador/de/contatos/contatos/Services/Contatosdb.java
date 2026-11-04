@@ -3,9 +3,11 @@ package gerenciador.de.contatos.contatos.Services;
 import gerenciador.de.contatos.contatos.Model.ContatosEntity;
 import gerenciador.de.contatos.contatos.Repository.ContatosRepos;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class Contatosdb {
 
     private final ContatosRepos repository;
@@ -15,8 +17,7 @@ public class Contatosdb {
     }
 
     public ContatosEntity add(ContatosEntity contatos) {
-        repository.save(contatos);
-        return contatos;
+        return repository.save(contatos);
     }
 
     public List<ContatosEntity> findAll() {
